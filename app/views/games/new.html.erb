@@ -1,9 +1,7 @@
-<h1>New game</h1>
-
-<%= render "form", game: @game %>
-
-<br>
-
-<div>
-  <%= link_to "Back to games", games_path %>
-</div>
+<header class="masthead d-flex align-items-center">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">מטווח מפורסמים</h1>
+        <h3 class="mb-5"><em>רק תכניסו את שם המשחק ותתחילו לשחק!</em></h3>
+        <%= render "form", game: @game %>
+    </div>
+</header>
