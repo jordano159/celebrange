@@ -3,7 +3,7 @@ class CelebsController < ApplicationController
 
   # GET /celebs or /celebs.json
   def index
-    @celebs = Celeb.all
+    @game = Game.find(params[:game_id])
   end
 
   # GET /celebs/1 or /celebs/1.json
@@ -60,7 +60,7 @@ class CelebsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_celeb
-      @celeb = Celeb.find(params[:id])
+      @celeb = Celeb.find(params[:celeb_id])
     end
 
     # Only allow a list of trusted parameters through.
