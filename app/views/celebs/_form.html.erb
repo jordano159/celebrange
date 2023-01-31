@@ -1,3 +1,14 @@
+<%= simple_form_for @game do |f| %>
+  <%= f.simple_fields_for :posts do |posts_form| %>
+    # Here you have all simple_form methods available
+    <%= posts_form.input :title %>
+  <% end %>
+  <%= f.input :name, label: 'שם המשחק', error: 'חובה להכניס שם', placeholder: 'קבוצת הדרקונים' %>
+  <%= f.button :submit, "יאללה למשחק", class: "btn btn-primary" %>
+<% end %>
+
+
+
 <%= form_with(model: celeb) do |form| %>
   <% if celeb.errors.any? %>
     <div style="color: red">
