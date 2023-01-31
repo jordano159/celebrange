@@ -1,7 +1,10 @@
 <div id="<%= dom_id game %>">
-  <p>
-    <strong>Name:</strong>
-    <%= game.name %>
-  </p>
+    <h1><%= game.name %></h1>
+
+  <% game.celebs.each do |celeb| %>
+    <p>
+      <%= celeb.name %>
+    </p>
+  <% end %>
 
 </div>
