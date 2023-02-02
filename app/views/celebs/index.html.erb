@@ -3,9 +3,12 @@
 <h1>Celebs</h1>
 
 <div id="celebs">
-  <% @game.celebs.each do |celeb| %>
+  <% @celebs.each do |celeb| %>
     <%= render celeb %>
+    <p>
+      <%= link_to "Show this celeb", celeb %>
+    </p>
   <% end %>
 </div>
 
-<%# link_to "New celeb", new_celeb_path %>
+<%= link_to "New celeb", new_celeb_path %>
